@@ -1,29 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Trip Planner</title>
-</head>
-<body>
+{% extends "layout.html" %}
 {% block content %}
+<div class="col-md-11 select-area">
   <span>Hotels</span>
   <select>
     {% for hotel in all_hotels %}
     <option>{{hotel.name}}</option>
     {% endfor %}
   </select>
+  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
   <span>Things To Do</span>
   <select>
     {% for restaurant in all_restaurants %}
     <option>{{restaurant.name}}</option>
     {% endfor %}
   </select>
+  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
   <span>Restaurants</span>
   <select>
     {% for thingToDo in all_things_to_do %}
     <option>{{thingToDo.name}}</option>
     {% endfor %}
   </select>
+  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+</div>
+
+<div class="col-md-11" id="days">
+  <div class="panel panel-default">
+   <!-- Default panel contents -->
+   <div class="panel-heading">Days</div>
+   <div class="panel-body">
+   <p class="listHead"> My Hotel </p>
+   <ul>
+     <li>Andaz Wall Street<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+
+   </ul>
+   <p class="listHead"> My Restaurants </p>
+   <ul>
+     <li>Bouley<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+     <li>Pylos<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+   </ul>
+   <p class="listHead"> My Things To Do </p>
+   <ul>
+     <li>Brooklyn Bridge Park<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+   </ul>
+   </div>
+  </div>
+
+</div>
+</div>
+
+
 {% endblock %}
-</body>
-</html>
+
+
+

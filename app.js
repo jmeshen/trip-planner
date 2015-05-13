@@ -20,17 +20,19 @@ swig.setDefaults({cache: false});
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
+app.use(
+  sass({
+    src: __dirname + '/assets/', //where the sass files are
+    dest: __dirname + '/public/', //where css should go
+    debug: true
+  })
+);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use(
-  sass({
-    src: __dirname + '/assets', //where the sass files are
-    dest: __dirname + '/public', //where css should go
-    debug: true
-  })
-);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
