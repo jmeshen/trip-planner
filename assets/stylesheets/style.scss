@@ -1,0 +1,105 @@
+@import "normalize";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #05204A;
+}
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand, .navbar-inverse {
+    background-color: #05204A;
+    color: #E1E2EF;
+
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #3F649D;
+}
+select {
+  width: 90%;
+  margin: 5px 0px;
+}
+
+#primary-row {
+  margin-top: 50px;
+}
+
+#days {
+  padding: 0;
+  .panel {
+    background-color: #E1E2EF;
+    border-radius: 5px;
+    .panel-heading {
+      border-radius: 5px 5px 0 0;
+      padding-bottom: 13px;
+    }
+  }
+
+  ul{
+    list-style: none;
+    .glyphicon {
+      float:right;
+    }
+  }
+}
+
+.select-area {
+  background-color: #E1E2EF;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto 20px
+}
+
+
+.col-md-3 {
+  padding-right: 0;
+  background-color: #05204A;
+}
+
+#map-canvas {
+  height: 100vh;
+}
+
+body {
+}
+
+.glyphicon-plus-sign {
+  color: green;
+}
+
+.glyphicon-minus-sign {
+  color: red;
+}
+
+.circle {
+  border-radius: 20px;
+  margin: 0 4px;
+  box-shadow: 2px 1px gray;
+}
+
+.glyphicon-plane {
+    margin: 1px;
+    width: 15px;
+    height: 15px;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
