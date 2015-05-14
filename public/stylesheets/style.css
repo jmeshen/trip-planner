@@ -332,7 +332,8 @@ select {
     background-color: #E1E2EF;
     border-radius: 5px; }
     #days .panel .panel-heading {
-      border-radius: 5px 5px 0 0; }
+      border-radius: 5px 5px 0 0;
+      padding-bottom: 13px; }
   #days ul {
     list-style: none; }
     #days ul .glyphicon {
@@ -351,3 +352,40 @@ select {
 #map-canvas {
   height: 100vh; }
 
+.glyphicon-plus-sign {
+  color: green; }
+
+.glyphicon-minus-sign {
+  color: red; }
+
+.circle {
+  border-radius: 20px;
+  margin: 0 4px;
+  box-shadow: 2px 1px gray; }
+
+.glyphicon-plane {
+  margin: 1px;
+  width: 15px;
+  height: 15px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(360deg); }
+
+  to {
+    -webkit-transform: rotate(0deg); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+
+  to {
+    transform: rotate(360deg); } }

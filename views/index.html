@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="col-md-11 select-area">
+<div class="col-md-11 col-sm-6 select-area">
   <span>Hotels</span>
   <select>
     {% for hotel in all_hotels %}
@@ -24,10 +24,16 @@
   <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
 </div>
 
-<div class="col-md-11" id="days">
+<div class="col-md-11 col-sm-6" id="days">
   <div class="panel panel-default">
    <!-- Default panel contents -->
-   <div class="panel-heading">Days</div>
+   <div class="panel-heading">
+
+      <button class="btn btn-info circle">1</button>
+      <button class="btn btn-info circle">2</button>
+      <button class="btn btn-info circle">3</button>
+
+   </div>
    <div class="panel-body">
    <p class="listHead"> My Hotel </p>
    <ul>
