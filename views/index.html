@@ -2,52 +2,43 @@
 {% block content %}
 <div class="col-md-11 col-sm-6 select-area">
   <span>Hotels</span>
-  <select>
+  <select class="fn-hotels">
     {% for hotel in all_hotels %}
     <option>{{hotel.name}}</option>
     {% endfor %}
   </select>
-  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-  <span>Things To Do</span>
-  <select>
+  <span id="hotels-btn" class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+  <span>Restaurants</span>
+  <select class="fn-restaurants">
     {% for restaurant in all_restaurants %}
     <option>{{restaurant.name}}</option>
     {% endfor %}
   </select>
-  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-  <span>Restaurants</span>
-  <select>
+  <span id="restaurants-btn" class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+  <span>Things To Do</span>
+  <select class="fn-thingsToDo">
     {% for thingToDo in all_things_to_do %}
     <option>{{thingToDo.name}}</option>
     {% endfor %}
   </select>
-  <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+  <span id="thingsToDo-btn" class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
 </div>
 
 <div class="col-md-11 col-sm-6" id="days">
   <div class="panel panel-default">
    <!-- Default panel contents -->
    <div class="panel-heading">
-
-      <button class="btn btn-info circle">1</button>
-      <button class="btn btn-info circle">2</button>
-      <button class="btn btn-info circle">3</button>
-
+      <button class="btn btn-info circle btn-add-day">+</button>
    </div>
    <div class="panel-body">
    <p class="listHead"> My Hotel </p>
-   <ul>
-     <li>Andaz Wall Street<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
-
+   <ul class="it-hotel">
    </ul>
    <p class="listHead"> My Restaurants </p>
-   <ul>
-     <li>Bouley<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
-     <li>Pylos<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+   <ul class="it-restaurant">
    </ul>
    <p class="listHead"> My Things To Do </p>
-   <ul>
-     <li>Brooklyn Bridge Park<span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+   <ul class="it-things">
    </ul>
    </div>
   </div>
@@ -55,6 +46,13 @@
 </div>
 </div>
 
+<script>
+{% autoescape false %}
+var all_hotels = {{ all_hotels | json }};
+var all_restaurants = {{ all_restaurants | json }};
+var all_things_to_do = {{ all_things_to_do | json }};
+{% endautoescape %}
+</script>
 
 {% endblock %}
 
