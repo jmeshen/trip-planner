@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "homepage": "https://github.com/jmeshen/trip-planner",
   "authors": [
-    "Jamie <jmeshen@gmail.com>"
+    "Jamie <jmeshen@gmail.com>",
+    "Tyler <threeperkins@gmail.com>",
+    "Kyle <kylelussier3@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
